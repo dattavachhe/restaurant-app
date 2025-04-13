@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Home | My Restaurant{% endblock %}
+{% load static %}
+{% block content %}
+<div class="text-center py-5">
+  <h1 class="display-4 fw-bold text-primary mb-3">Welcome to My Restaurant</h1>
+  <p class="lead text-muted mb-4">
+    Discover delicious flavors, cozy ambiance, and hassle-free online reservations.
+  </p>
+
+  <a href="{% url 'menu' %}" class="btn btn-primary btn-lg px-4">
+    Explore Our Menu
+  </a>
+</div>
+
+<!-- Image Banner -->
+<div class="text-center mt-5">
+  <img src="{% static 'images/re.jpg' %}" alt="Restaurant" class="img-fluid rounded shadow-sm" style="max-height: 400px; object-fit: cover;">
+</div>
+{% endblock %}

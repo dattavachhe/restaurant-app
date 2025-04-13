@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>{% extends 'base.html' %}
+{% block content %}
+  <h2>Welcome, {{ user.username }}</h2>
+  <p>Email: {{ user.email }}</p>
+
+  <h3>Your Reservations:</h3>
+  {% if reservations %}
+    <ul>
+      {% for r in reservations %}
+        <li>{{ r.date }} at {{ r.time }} for {{ r.guests }} guest(s)</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>You have no reservations.</p>
+  {% endif %}
+{% endblock %}
